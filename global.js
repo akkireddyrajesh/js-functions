@@ -39,16 +39,19 @@ str.substr(0,str.indexOf(' '));
 str.substr(str.indexOf(' ')+1); 
 
 
-// 1
 //jQuery keypress 
 //Key press functions
+// 1 . default 
 $(document).ready(function(){
-    
-    $('.vaildName').bind('keypress', vaildName);
+   $('.vaildName').bind('keypress', vaildName);
 });
+//2. if the html elements are created dynamiccaly then    
+$(document).bind("keypress",".validName",vaildNo);
+
 function vaildName(e) {
     a('key pressed');
 }
+
 
 // Jquery Form Subbmission
 $( "form" ).submit(function( event ) {
