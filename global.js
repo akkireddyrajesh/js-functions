@@ -33,10 +33,14 @@ function findByMatchingProperties(set, properties) {
 }
 var results = findByMatchingProperties(set, { color: "green" });
 
+//split string
+//split name into firstName and lastName
+str.substr(0,str.indexOf(' '));
+str.substr(str.indexOf(' ')+1); 
 
 
 // 1
-
+//jQuery keypress 
 //Key press functions
 $(document).ready(function(){
     
@@ -52,7 +56,6 @@ $( "form" ).submit(function( event ) {
         $( "span" ).text( "Validated..." ).show();
         return;
     }
-
     $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
     event.preventDefault();
 });
@@ -61,7 +64,6 @@ $( "form" ).submit(function( event ) {
 //Compare two arrays and return a new array with any items only found in one of the original arrays
 var array1 = ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
     array2 = ["diorite", "andesite", "grass", "dirt", "dead shrub"];
-
 function symmetricDifference(setA, setB) {
     var o = {}, result = [];
     function count(i, o) {
