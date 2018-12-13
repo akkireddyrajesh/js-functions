@@ -65,6 +65,7 @@ $( "form" ).submit(function( event ) {
 
 
 //Compare two arrays and return a new array with any items only found in one of the original arrays
+//method 1
 var array1 = ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
     array2 = ["diorite", "andesite", "grass", "dirt", "dead shrub"];
 function symmetricDifference(setA, setB) {
@@ -88,6 +89,17 @@ function symmetricDifference(setA, setB) {
     });
     return result;
 }
+
+//method 2
+Array.prototype.diff = function(a) {
+    return this.filter(function(i) {return a.indexOf(i) < 0;});
+};
+// Examples  
+[1,2,3,4,5,6].diff( [3,4,5] );  
+// => [1, 2, 6]
+["test1", "test2","test3","test4","test5","test6"].diff(["test1","test2","test3","test4"]);  
+// => ["test5", "test6"]
+
 
 //self invoking function
 (function myLoop (i) {          
