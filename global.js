@@ -43,6 +43,11 @@ str.substr(str.indexOf(' ')+1);
 $("#formId").submit(function (event) {
     event.preventDefault();
     let serialize = $(this).serializeArray();
+    
+//     //handle file data
+//     let uploadedFile = $('#uploadFile').prop('files')[0];
+//     alert(uploadedFile.name);
+    
     let formObj = {};
     $.each(serialize, function (key, val) {
         formObj[val.name] = val.value;
