@@ -38,6 +38,19 @@ var results = findByMatchingProperties(set, { color: "green" });
 str.substr(0,str.indexOf(' '));
 str.substr(str.indexOf(' ')+1); 
 
+//---------------------- forms ----------------
+//form submit
+$("#formId").submit(function (event) {
+    event.preventDefault();
+    let serialize = $(this).serializeArray();
+    let formObj = {};
+    $.each(serialize, function (key, val) {
+        formObj[val.name] = val.value;
+    });
+    console.log(formObj);
+
+    cbFn(formObj);
+});
 
 //jQuery keypress 
 //Key press functions
@@ -51,17 +64,6 @@ $(document).bind("keypress",".validName",vaildNo);
 function vaildName(e) {
     a('key pressed');
 }
-
-
-// Jquery Form Subbmission
-$( "form" ).submit(function( event ) {
-    if ( $( "input:first" ).val() === "correct" ) {
-        $( "span" ).text( "Validated..." ).show();
-        return;
-    }
-    $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
-    event.preventDefault();
-});
 
 
 //Compare two arrays and return a new array with any items only found in one of the original arrays
