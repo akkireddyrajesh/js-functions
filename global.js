@@ -3,6 +3,11 @@
 //removing duplicate elements from array
 let uniqueElArray = Array.from(new Set(array));
 
+//fetch Object by value from AoO
+let AoB=[{"a":1,"b":2,"c":3},{"a":4,"b":5,"c":6}]; 
+let eachObj=AoB.find(x => x.a === 1)
+console.log(`eachObj`, eachObj);
+
 //getting particular values array from  AofO
 let elArray= AoB.map(a => a.elArray);
 
