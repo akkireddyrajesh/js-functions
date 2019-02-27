@@ -1,3 +1,18 @@
+/*---------------- Objects -----------------*/
+//loop through Objects
+const obj = { foo: 'bar', baz: 42 };
+Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
+//ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries">reference</a>
+
+//ECMAScript 2015 (ES6) Standard Method
+/* For the case in question, you would do: */
+Object.assign(obj1, obj2);
+//or
+var allRules = Object.assign({}, obj1, obj2, obj3, etc);
+
+
+/*---------------- Arrays -----------------*/
 
 // Array Operations
 //removing duplicate elements from array
@@ -10,12 +25,6 @@ console.log(`eachObj`, eachObj);
 
 //getting particular values array from  AofO
 let elArray= AoB.map(a => a.elArray);
-
-//ECMAScript 2015 (ES6) Standard Method
-/* For the case in question, you would do: */
-Object.assign(obj1, obj2);
-//or
-var allRules = Object.assign({}, obj1, obj2, obj3, etc);
 
 //finding the value in array
 let arr = ['a','b','c'];
