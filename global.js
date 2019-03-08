@@ -166,3 +166,8 @@ function onReaderLoad(event){
     var obj = JSON.parse(event.target.result);
     console.log('file uploaded successfully...',obj);
 }
+
+//------------- String handling -----------------------
+//string first letter Capitalize
+const name = 'flavio'
+const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
