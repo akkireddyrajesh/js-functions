@@ -178,3 +178,25 @@ const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+//------------- Regular Expressions -----------------------
+(1)alphabets with space
+-------------------------------------
+    //use: names 
+    /^[a-z\s]+$/i
+ex: /^[a-z\s]+$/i.test('rajesh kumar') //true
+
+
+(2)alpha numeric values with out space
+-------------------------------------
+    // this for pancrad no and passport 
+ /^[a-z0-9]*$/i
+ex: /^[a-z0-9]*$/i.test('AP29BC1234') //true
+
+(2)alpha numeric values with space
+-------------------------------------
+    //use: names 
+ 
+/^[-\w\s]+$/
+ex: 
+/^[-\w\s]+$/.test('PAN 1235') //true
