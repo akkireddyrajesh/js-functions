@@ -146,6 +146,15 @@ function onReaderLoad(event){
     console.log('file uploaded successfully...',obj);
 }
 
+//finding the max z-index value in html page
+//How can you figure out the highest z-index in your document?
+ var maxZ = Math.max.apply(null, 
+    $.map($('body *'), function(e,n) {
+      if ($(e).css('position') != 'static')
+        return parseInt($(e).css('z-index')) || 1;
+  }));
+
+
 //----------- JQuery forms ------------
 //form submit
 $("#formId").submit(function (event) {
