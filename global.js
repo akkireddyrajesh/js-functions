@@ -108,6 +108,25 @@ things.thing = things.thing.filter((thing, index, self) =>
 var date = new Date();
 date.toISOString(); //"2018-07-03T18:45:44.855Z"
 
+function getCurrentTime() {
+    Number.prototype.padLeft = function(base, chr) {
+        var len = (String(base || 10).length - String(this).length) + 1;
+        return len > 0 ? new Array(len).join(chr || '0') + this : this;
+    }
+
+    var d = new Date,
+        dformat = [(d.getMonth() + 1).padLeft(),
+            d.getDate().padLeft(),
+            d.getFullYear()
+        ].join('/') + ' ' + [d.getHours().padLeft(),
+            d.getMinutes().padLeft(),
+            d.getSeconds().padLeft()
+        ].join(':');
+    //=> dformat => '05/17/2012 10:52:21'
+    return dformat;
+
+}
+
 //------------- JQuery -----------------------
 
 //jQuery keypress 
