@@ -1,4 +1,6 @@
 /*---------------- Objects -----------------*/
+//object check
+let isObjEmpty=(obj)=>{if(Object.entries(obj).length === 0 && obj.constructor === Object) return true; return false;}
 //loop through Objects
 const obj = { foo: 'bar', baz: 42 };
 Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
