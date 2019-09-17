@@ -1,6 +1,14 @@
 /*---------------- Objects -----------------*/
 //object check
+//m1
 let isObjEmpty=(obj)=>{if(Object.entries(obj).length === 0 && obj.constructor === Object) return true; return false;}
+//m2
+//paramsObj validation
+if (!vldtrObj || !(Object.entries(vldtrObj).length === 0 && vldtrObj.constructor === Object)) {
+    return { err: "invalid params" };
+}
+
+
 //loop through Objects
 const obj = { foo: 'bar', baz: 42 };
 Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
